@@ -34,6 +34,7 @@ var App = {
       Rooms.addRooms(data);
       RoomsView.initialize();
       MessagesView.initialize();
+      console.log('MessagesView obj: ', MessagesView)
     });
   },
 
