@@ -31,7 +31,9 @@ var App = {
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
       Messages._data = data;
-      console.log(Messages._data);
+      Rooms.addRooms(data);
+      RoomsView.initialize();
+      MessagesView.initialize();
     });
   },
 
