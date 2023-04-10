@@ -32,7 +32,8 @@ var RoomsView = {
     // render messages which have the matching room id
     // clear chats
     // rerender chats such that only chats matching roomname are rendered
-    $('#chats').html=('');
+    $('#chats').html("");
+
     $('#rooms select').append(`<option value="room">${roomname}</option>`);
     if (Messages._data !== null) {
       for (var i = 0; i < Messages._data.length; i++) {
@@ -50,11 +51,9 @@ var RoomsView = {
 
   },
 
-  handleClick: function(event) {
+  handleClick: function() {
     // TODO: Handle the user clicking the "Add Room" button.
-    // ask for room name
-    // place room name is render list
-    // call renderRoom for entered room name
+    Rooms.add();
   }
 
 };

@@ -10,7 +10,6 @@ var MessagesView = {
     // when this view loads.
     if (Messages._data !== null) {
       MessagesView.render();
-      MessagesView.handleClick();
     }
   },
 
@@ -28,16 +27,16 @@ var MessagesView = {
 
   // $('.chat').on('click', '.username', handleClick);
 
-  handleClick: function() {
+  handleClick: function(username) {
     // TODO: handle a user clicking on a message
     // (this should add the sender to the user's friend list).
     // on click, update Friends._data to include username of message author
 
-    $("#chats").on( "click", ".chat", function() {
-      console.log('anything');
-      Friends.addFriend(event.target.username);
-      console.log(Friends._data);
-    });
+
+
+    Friends.toggleStatus(username);
+    console.log(Friends._data);
+
 
   }
 

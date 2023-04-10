@@ -31,7 +31,7 @@ var App = {
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
       Messages._data = data;
-      Rooms.addRooms(data);
+      Rooms.database(data);
       RoomsView.initialize();
       MessagesView.initialize();
       console.log('MessagesView obj: ', MessagesView)

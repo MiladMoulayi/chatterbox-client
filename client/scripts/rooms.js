@@ -11,7 +11,7 @@ var Rooms = {
   // mark a room as selected, etc.
 
   // loop through messages._data and extract rooms
-  addRooms: function (data) {
+  database: function (data) {
     for (var i = 0; i < data.length; i++) {
       // check if rommname is already in _data
       if (!Rooms._data.includes(data[i].roomname)) {
@@ -19,6 +19,14 @@ var Rooms = {
         Rooms._data.push(data[i].roomname);
       }
     }
+  },
+
+  add: function() {
+    var roomName = prompt('Please enter a room name:');
+    Rooms.database([roomName]);
+    RoomsView.renderRoom(roomName);
+
+    return roomName;
   }
 
 };
